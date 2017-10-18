@@ -1,0 +1,33 @@
+$breakToggle: 1023px
+.navbar
+  width: 100%
+  height: 60px
+  background-color: #fff
+  top: 0
+  left: 0
+  position: fixed
+  &__toggle
+    display: none
+    @media (max-width: $breakToggle)
+      display: block
+      position: absolute
+  &__item
+    float: left
+    min-width: 90px
+    &--sublevel
+      float: none
+    &--dropdown
+      position: relative
+      >.navbar__dropdown
+        display: none
+      &:hover
+        >.navbar__dropdown
+          display: block
+  &__dropdown
+    position: absolute
+    background-color: #fff
+    @media (max-width: $breakToggle)
+      display: block
+    &--level3
+      left: 100%
+      top: 0
