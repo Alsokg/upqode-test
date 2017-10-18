@@ -2,8 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
-var minify = require('gulp-minify-css');
 var cssnano = require('gulp-cssnano');
+var uglify = require("gulp-uglify");
 
 gulp.task('sass', function(){
   return gulp.src('devResources/sass/*.sass')
@@ -16,9 +16,16 @@ gulp.task('sass', function(){
     .pipe(cssnano())
     .pipe(gulp.dest('css'))
 });
+gulp.task('scripts', function(){
+  return gulp.src('devResources/js/*.js')
+    .pipe(concat("all.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest('js'))
+});
 gulp.task('watch', function(){
-  return gulp.watch('devResources/sass/*.sass', ['sass']); 
+  gulp.watch('devResources/sass/*.sass', ['sass']); 
+  gulp.watch('devResources/js/*.js', ['scripts']); 
   // Other watchers
 })
 
-gulp.task("default", ["watch", "sass"]);
+gulp.task("default", ["watch", "sass", "scripts"]);
