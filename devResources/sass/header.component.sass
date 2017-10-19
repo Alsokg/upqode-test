@@ -1,0 +1,43 @@
+.header
+  text-align: center
+  &__title
+    font-size: 2.25rem
+    font-weight: 700
+    text-transform: uppercase
+    color: #232323
+    &--blue
+      color: #009dda
+    @media (max-width: 479px)
+      font-size: 1.5rem
+  &__description
+    color: #999
+    font-size: 0.875rem
+    line-height: 24px
+    max-width: 650px
+    padding: 24px 16px
+    margin: 0 auto
+    @media (max-width: 767px)
+      padding: 12px
+  &__description--dark
+    color: #373737
+  &__description--left, &__description--dark
+    margin-left: 0
+    padding-left: 0
+    padding-right: 0
+.header--left
+  text-align: left
+.left-aligner
+  width: 100%
+  padding-left: 14%
+  max-width: 800px
+  margin-left: -16px
+  padding-right: 20px
+  background-color: rgba(255,255,255,0.85)
+  @media (max-width: 1300px)
+    padding-left: 0
+    padding-right: 0
+    margin-left: 0
+@media (max-width: 479px)
+  .list
+    padding-top: 16px
+    margin-bottom: -36px

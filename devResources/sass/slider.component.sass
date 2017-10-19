@@ -1,0 +1,114 @@
+.slider
+  max-width: 100%
+  position: relative
+  margin-top: 60px
+  &__item
+    max-width: 100%
+    float: left
+    min-height: 1px
+    height: 100%
+    display: block
+    position: relative
+    img
+      width: 100%
+      max-width: initial
+    &__info
+      position: absolute
+      text-align: center
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      max-width: 100%
+      width: 950px
+      padding: 0 64px
+    &__title
+      font-size: 4rem
+      font-weight: 700
+      color: #fff
+      letter-spacing: 0.055em
+      padding-bottom: 30px
+      @media (max-width: 1023px)
+        font-size: 2.5rem
+        padding-bottom: 16px
+      @media (max-width: 767px)
+        font-size: 1.5rem
+      @media (max-width: 479px)
+        font-size: 1rem
+    &__title--yellow
+      color: #fff200
+    &__description
+      letter-spacing: 0.04em
+      color: #fff
+      width: 80%
+      margin: 0 auto
+      line-height: 30px
+      @media (max-width: 767px)
+        line-height: normal
+      @media (max-width: 479px)
+        width: 100%
+        font-size: 0.8rem
+        max-height: 50px
+        overflow: hidden
+.slick-track
+  position: relative
+  top: 0
+  left: 0
+  display: block
+.slick-list
+  position: relative
+  display: block
+  overflow: hidden
+  margin: 0
+  padding: 0
+.slick-dots, .slick-next, .slick-prev
+  position: absolute
+  z-index: 2
+  cursor: pointer
+.slick-prev
+  left: 30px
+  @media (max-width: 767px)
+    left: 8px
+.slick-next
+  right: 30px
+  @media (max-width: 767px)
+    right: 8px
+.slick-next, .slick-prev
+  top: 50%
+  width: 60px
+  height: 60px
+  background-color: rgba(255,255,255,0.2)
+  text-align: center
+  margin-top: -30px
+  @media (max-width: 479px)
+    width: 40px
+    height: 40px
+    margin-top: -15px
+  &:hover
+    background-color: rgba(255,255,255,0.4)
+  i
+    color: #fff
+    font-size: 1.5rem
+    line-height: 60px
+    @media (max-width: 479px)
+      font-size: 1rem
+      line-height: 40px
+.slick-dots
+  bottom: 40px
+  width: 100%
+  display: flex
+  justify-content: center
+  @media (max-width: 767px)
+    bottom: 8px
+  li
+    float: left
+    padding: 3px
+  button
+    text-indent: -9999px
+    width: 6px
+    height: 6px
+    border-radius: 50%
+    background-color: #b7b7b7
+    cursor: pointer
+  .slick-active, li:hover
+    button
+      background-color: #fff

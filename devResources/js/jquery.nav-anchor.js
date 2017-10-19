@@ -19,7 +19,7 @@
           event.preventDefault();
 
           var pos = $('#' + $(e).data('id')).position();
-          $(self.settings.window.document).find('html, body').animate({ scrollTop: pos.top - self.settings.fixedMenuHeight }, 
+          $(self.settings.window.document).find('html, body').animate({ scrollTop: pos.top - self.settings.fixedMenuHeight },
             self.settings.scrollTime,
             function() {
               self.setAnchor($(e).data('id'));
@@ -29,9 +29,9 @@
       });
 
       // scroll event
-        $(self.settings.window).scroll(function() {
-            self.setAnchor();
-        });
+      $(self.settings.window).scroll(function() {
+        self.setAnchor();
+      });
 
     };
 
@@ -40,20 +40,20 @@
       var currentId = '';
 
       $(element).find('>ul>li').each(function(i, e) {
-          // remove selected class
-          if ($('[data-id="' + $(e).data('id') + '"]').hasClass('is-active')) {
-            $('[data-id="' + $(e).data('id') + '"]').removeClass('is-active');
-          }
+        // remove selected class
+        if ($('[data-id="' + $(e).data('id') + '"]').hasClass('is-active')) {
+          $('[data-id="' + $(e).data('id') + '"]').removeClass('is-active');
+        }
 
-          var x = $('#' + $(e).data('id')).offset();
-          var y = self.settings.window.pageYOffset;
-          var scrPos = x.top - y;
+        var x = $('#' + $(e).data('id')).offset();
+        var y = self.settings.window.pageYOffset;
+        var scrPos = x.top - y;
 
-          if ((scrPos >= 0 && currentPos >= scrPos) || currentPos <= 0 || currentId === '') {
-            currentPos = scrPos;
-            currentId = $(e).data('id');
-          }
-        
+        if ((scrPos >= 0 && currentPos >= scrPos) || currentPos <= 0 || currentId === '') {
+          currentPos = scrPos;
+          currentId = $(e).data('id');
+        }
+
 
       });
 
@@ -66,7 +66,7 @@
     };
 
     self.init();
-    self.setAnchor();
+   // self.setAnchor();
   };
 
   $.fn.NavAnchor = function(options) {

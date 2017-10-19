@@ -1,19 +1,77 @@
 $breakToggle: 1023px
+$breakLaptop: 1300px
+$menuActiveColor: #fff200
+$menuBgColor: #fff
+.logo
+  float: left
+  padding-left: 14%
+  padding-top: 22px
+  padding-bottom: 21px
+  @media (max-width: $breakLaptop)
+    padding-left: 20px
+.form-group
+  padding: 20px 0
+  width: 180px
+  input
+    width: 180px
+    background-color: #e8e4f1
+    height: 30px
+    line-height: 30px
+    padding-left: 8px
+    padding-right: 44px
+    float: left
+  button
+    width: 44px
+    height: 30px
+    text-align: center
+    margin-left: -44px
+    float: left
+    cursor: pointers
+    i
+      color: #585858
 .navbar
   width: 100%
-  height: 60px
-  background-color: #fff
+  height: 70px
+  background-color: $menuBgColor
   top: 0
   left: 0
   position: fixed
+  z-index: 3
+  &__form, &__list
+    float: right
+  &__form
+    margin-right: 14%
+    margin-left: 1%
+    @media (max-width: $breakLaptop)
+      margin-right: 20px
+    @media (max-width: $breakToggle)
+      display: none
   &__toggle
     display: none
     @media (max-width: $breakToggle)
       display: block
       position: absolute
+      right: 20px
+      line-height: 70px
+      width: 44px
+      text-align: center
+      font-size: 1.5rem
+      color: #232323
   &__item
     float: left
     min-width: 90px
+    height: 70px
+    text-align: center
+    padding: 0px 28px
+    a
+      line-height: 70px
+      display: block
+      height: 100%
+      width: 100%
+      text-decoration: none
+      color: #232323
+    &:hover > a
+      font-weight: bold
     &--sublevel
       float: none
     &--dropdown
@@ -25,9 +83,46 @@ $breakToggle: 1023px
           display: block
   &__dropdown
     position: absolute
-    background-color: #fff
+    background-color: rgba(0,0,0,.65)
+    border-top: 2px solid $menuActiveColor
+    min-width: 180px
+    padding: 16px 0 16px 16px
     @media (max-width: $breakToggle)
       display: block
     &--level3
       left: 100%
       top: 0
+  &__item--sublevel
+    position: relative
+    padding-left: 24px
+    padding-right: 0
+    text-align: left
+    height: 37px
+    a
+      line-height: 37px
+      color: #fff
+      font-size: 0.875rem
+      letter-spacing: 0.075em
+      font-weight: 300
+      padding-right: 16px
+    &:before
+      content: ""
+      font-family: "FontAwesome"
+      display: block
+      position: absolute
+      left: 5px
+      top: 10px
+      color: #fff
+    &:hover
+      >a
+        color: $menuActiveColor
+        font-weight: 300
+      &:before
+        content: ""
+        color: $menuActiveColor
+  .is-active > a
+    font-weight: 700
+@media (max-width: $breakToggle)
+  .navbar
+    &__list
+      display: none

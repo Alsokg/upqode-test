@@ -8,81 +8,370 @@
 		<script src="libs/js/slick.min.js"></script>
 		<script src="js/all.js"></script>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700,900" rel="stylesheet">
 		<title>Test</title>
 	</head>
 	<body>
+		
 	<header>
-		<nav id="main-nav" class="navbar" role="navigation">
-			<a href="#" class="navbar__toogle"></a>
+		<nav id="main-nav" class="navbar">
+			<div class="logo">
+				<img src="images/logo.png" alt="UpCode-logo">
+			</div>
+			<form id="search-form" class="navbar__form" action="" method="POST">
+				<div class="form-group">
+					<input type="search" name="search" id="search" placeholder="Search">
+					<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+				</div>
+			</form>
 			<ul class="navbar__list">
-				<li class="navbar__item" data-id="top"><a href="#top">CSS</a></li>
-        <li class="navbar__item" data-id="second"><a href="#second">HTML</a></li>
+				<li class="navbar__item is-active" data-id="home"><a href="#home">Home</a></li>
+        <li class="navbar__item" data-id="why-us"><a href="#why-us">Why us</a></li>
         <li class="navbar__item navbar__item--dropdown" data-id="products">
         	<a href="#products">Products</a>
         	<ul class="navbar__dropdown navbar__dropdown--level2">
-        		<li class="navbar__item navbar__item--sublevel"><a href="#">CSS</a></li>
-        		<li class="navbar__item navbar__item--sublevel"><a href="#">CSS</a></li>
+        		<li class="navbar__item navbar__item--sublevel"><a href="#">Name Surname</a></li>
+        		<li class="navbar__item navbar__item--sublevel"><a href="#">Nelson</a></li>
         		<li class="navbar__item navbar__item--sublevel navbar__item--dropdown">
-        			<a href="#">CSS</a>
+        			<a href="#">Surname</a>
         			<ul class="navbar__dropdown navbar__dropdown--level3">
-        				<li class="navbar__item navbar__item--sublevel"><a href="#">CSS2</a></li>
-        				<li class="navbar__item navbar__item--sublevel"><a href="#">CSS2</a></li>
-        				<li class="navbar__item navbar__item--sublevel"><a href="#">CSS2</a></li>
-        				<li class="navbar__item navbar__item--sublevel"><a href="#">CSS2</a></li>
+        				<li class="navbar__item navbar__item--sublevel"><a href="#">Nelson</a></li>
+        				<li class="navbar__item navbar__item--sublevel"><a href="#">Nelson</a></li>
+        				<li class="navbar__item navbar__item--sublevel"><a href="#">Nelson</a></li>
+        				<li class="navbar__item navbar__item--sublevel"><a href="#">Nelson</a></li>
         			</ul>
         		</li>
-        		<li class="navbar__item navbar__item--sublevel"><a href="#">CSS</a></li>
+        		<li class="navbar__item navbar__item--sublevel"><a href="#">Nelson</a></li>
         	</ul>
         </li>
-        <li class="navbar__item" data-id="about-us"><a href="about-us">Database</a></li>
-				<li class="navbar__item" data-id="contacts"><a href="#contacts">Programming</a></li>
+        <li class="navbar__item" data-id="about"><a href="about">About</a></li>
+				<li class="navbar__item" data-id="contacts"><a href="#contacts">Contacts</a></li>
 			</ul>
+			<a href="#" class="navbar__toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
 		</nav>
 	</header>
-	<div id="top">
-          <h1>CSS</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+	
+	<section id="home">
+		<div class="slider">
+			<div class="slider__item">
+				<img src="images/h.jpg" alt="image1">
+				<div class="slider__item__info">
+					<p class="slider__item__title">Creative <span class="slider__item__title slider__item__title--yellow">Design Agency</span></p>
+					<p class="slider__item__description">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.</p>
+				</div>
+			</div>
+			<div class="slider__item">
+				<img src="images/h.jpg" alt="image2">
+				<div class="slider__item__info">
+					<p class="slider__item__title">Creative Design <span class="slider__item__title slider__item__title--yellow">Agency</span></p>
+					<p class="slider__item__description">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.</p>
+				</div>
+			</div>
+			<div class="slider__item">
+				<img src="images/h.jpg" alt="image3">
+				<div class="slider__item__info">
+					<p class="slider__item__title">Creative Design <span class="slider__item__title slider__item__title--yellow">Agency</span></p>
+					<p class="slider__item__description">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Curabitur blandit tempus porttitor.</p>
+				</div>
+			</div>
+		</div>
+  </section>
+	
+	<section id="why-us" class="section-wrapper">
+		<div class="header">
+			<h2 class="header__title">Why <span class="header__title header__title--blue">Choose Us</span></h2>
+			<p class="header__description">Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis. Nullam at scelerisque tellus mattis volutpat rhoncus, </p>
+		</div>
+		<div class="grid">
+			<div class="card">
+				<div class="card__icon"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
+				<div class="card__title">YOUR TITLE</div>
+				<div class="card__description">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis bibendum diam non erat facilaisis tincidunt. </div>
+				<div class="card__interactive">
+					<div class="card__more">SEE MORE</div>
+					<div class="card__links-container">
+						<a href="#" class="card__link"><i class="fa fa-link" aria-hidden="true"></i></a>
+						<a href="#" class="card__link"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card__icon"><i class="fa fa-commenting-o" aria-hidden="true"></i></div>
+				<div class="card__title">YOUR TITLE</div>
+				<div class="card__description">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis bibendum diam non erat facilaisis tincidunt. </div>
+				<div class="card__interactive">
+					<div class="card__more">SEE MORE</div>
+					<div class="card__links-container">
+						<a href="#" class="card__link"><i class="fa fa-link" aria-hidden="true"></i></a>
+						<a href="#" class="card__link"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card__icon"><i class="fa fa-laptop" aria-hidden="true"></i></div>
+				<div class="card__title">YOUR TITLE</div>
+				<div class="card__description">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis bibendum diam non erat facilaisis tincidunt. </div>
+				<div class="card__interactive">
+					<div class="card__more">SEE MORE</div>
+					<div class="card__links-container">
+						<a href="#" class="card__link"><i class="fa fa-link" aria-hidden="true"></i></a>
+						<a href="#" class="card__link"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card__icon"><i class="fa fa-star-o" aria-hidden="true"></i></div>
+				<div class="card__title">YOUR TITLE</div>
+				<div class="card__description">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis bibendum diam non erat facilaisis tincidunt. </div>
+				<div class="card__interactive">
+					<div class="card__more">SEE MORE</div>
+					<div class="card__links-container">
+						<a href="#" class="card__link"><i class="fa fa-link" aria-hidden="true"></i></a>
+						<a href="#" class="card__link"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card__icon"><i class="fa fa-flag-o" aria-hidden="true"></i></div>
+				<div class="card__title">YOUR TITLE</div>
+				<div class="card__description">Duis bibendum diam non erat facilaisis en ter tincidunt. Duis bibendum diam non erat facilaisis tincidunt. </div>
+				<div class="card__interactive">
+					<div class="card__more">SEE MORE</div>
+					<div class="card__links-container">
+						<a href="#" class="card__link"><i class="fa fa-link" aria-hidden="true"></i></a>
+						<a href="#" class="card__link"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+  <section id="products" class="no-markup">
+  	<div class="header">
+			<h2 class="header__title">0 Products Today :(</h2>
+		</div>
+	</section>
+	
+  <section id="about" class="section-wrapper right-bg">
+  	<div class="left-aligner">
+  		<div class="header header--left">
+				<h2 class="header__title"><span class="header__title header__title--blue">About</span> Us</h2>
+				<p class="header__description header__description--left">Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euism Nullam at scelerisque tellus mattis volutpat rhoncus,  </p>
+				<p class="header__description header__description--dark">Nullam at scelerisque tellus. Nulla feugiat iaculis ante, non tincidunt ligula scelerisque a. Vestibulum accumsan tincidunt odio vel finibus. Phasellus vestibulum lobortis ligula ut volutpat. Maecenas vitae nibh vel purus mollis semper. Nullam tempus feugiat mi id semper. Pellentesque ac posuere augue, vitae mollis enim. Etiam et ullamcorper dolor, a hendrerit quam. Donec pulvinar iaculis faucibus. Nunc feugiat semper fringilla.</p>
+			</div>
+			<div class="list">
+				<div class="line">
+					<div class="line__name">PHOTOSHOP</div>
+        	<div class="line__percent"><span class="line__precent__number" data-percent="79">0</span><span>%</span></div>
+        	<div class="line__bg">
+        		<span class="line__filler"></span>
+        	</div>
+      	</div>
+				<div class="line">
+					<div class="line__name">HTML/CSS</div>
+        	<div class="line__percent"><span class="line__precent__number" data-percent="90">0</span><span>%</span></div>
+        	<div class="line__bg">
+        		<span class="line__filler"></span>
+        	</div>
+      	</div>
+				<div class="line">
+					<div class="line__name">JAVASCRIPT</div>
+        	<div class="line__percent"><span class="line__precent__number" data-percent="69">0</span><span>%</span></div>
+        	<div class="line__bg">
+        		<span class="line__filler"></span>
+        	</div>
+      	</div>
+				<div class="line">
+					<div class="line__name">WORDRESS</div>
+        	<div class="line__percent"><span class="line__precent__number" data-percent="92">0</span><span>%</span></div>
+        	<div class="line__bg">
+        		<span class="line__filler"></span>
+        	</div>
+      	</div>
+			</div>
+  	</div>
+  </section>
+  
+	<section id="contacts">
+		<div class="section-wrapper low-padding">
+			<div class="header">
+				<h2 class="header__title">Get in <span class="header__title header__title--blue">Touch</span></h2>
+				<p class="header__description">Quisque fermentum, nisl mattis volutpat rhoncus, tellus est congue nibh, ut euismod quam nisi quis felis. Nullam at scelerisque tellus mattis volutpat rhoncus, </p>
+			</div>
+		</div>
+		<div class="map-wrapper">
+			<div id="map"></div>
+			<div class="contact section-wrapper">
+				<div class="aligner-center">
+					<form class="contact__form" id="contact-us" action="" method="POST">
+						<div class="contact__group contact__group--inline">
+							<input type="text" name="name" id="name" placeholder="Name" required>
+							<input type="email" name="email" id="email" placeholder="Email" required>
+						</div>
+						<div class="contact__group">
+							<textarea id="message" name="message" required placeholder="message"></textarea>
+						</div>
+						<div class="contact__group contact__group--inline">
+							<input type="checkbox" name="cool" id="cool" class="hidden custom-checkbox">
+							<label for="cool"><span class="custom"><i class="fa fa-check" aria-hidden="true"></i></span>I like your company</label>
+							<input type="submit" value="Send">
+						</div>
+					</form>
+					<div class="contact__info">
+						<p>69/A, Some Street Name Your City, code 01234 Country Name</p>
+						<p>+880 123 456 78 98<br>+860 987 648 74 95</p>
+						<p>company@mail.com<br>sales@mail.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer>
+		<p class="copy">Copyright © Company. All Rights Reserved  2016</p>
+		<div class="social">
+			<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+		</div>
+		<div class="clear"></div>
+	</footer>
+	
+<script>
+function initMap() {
 
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+        // Create a new StyledMapType object, passing it an array of styles,
+        // and the name to be displayed on the map type control.
+        var styledMapType = new google.maps.StyledMapType(
+            [
+              {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
+              {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
+              {elementType: 'labels.text.stroke', stylers: [{color: '#f5f1e6'}]},
+              {
+                featureType: 'administrative',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#c9b2a6'}]
+              },
+              {
+                featureType: 'administrative.land_parcel',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#dcd2be'}]
+              },
+              {
+                featureType: 'administrative.land_parcel',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#ae9e90'}]
+              },
+              {
+                featureType: 'landscape.natural',
+                elementType: 'geometry',
+                stylers: [{color: '#dfd2ae'}]
+              },
+              {
+                featureType: 'poi',
+                elementType: 'geometry',
+                stylers: [{color: '#dfd2ae'}]
+              },
+              {
+                featureType: 'poi',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#93817c'}]
+              },
+              {
+                featureType: 'poi.park',
+                elementType: 'geometry.fill',
+                stylers: [{color: '#a5b076'}]
+              },
+              {
+                featureType: 'poi.park',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#447530'}]
+              },
+              {
+                featureType: 'road',
+                elementType: 'geometry',
+                stylers: [{color: '#f5f1e6'}]
+              },
+              {
+                featureType: 'road.arterial',
+                elementType: 'geometry',
+                stylers: [{color: '#fdfcf8'}]
+              },
+              {
+                featureType: 'road.highway',
+                elementType: 'geometry',
+                stylers: [{color: '#f8c967'}]
+              },
+              {
+                featureType: 'road.highway',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#e9bc62'}]
+              },
+              {
+                featureType: 'road.highway.controlled_access',
+                elementType: 'geometry',
+                stylers: [{color: '#e98d58'}]
+              },
+              {
+                featureType: 'road.highway.controlled_access',
+                elementType: 'geometry.stroke',
+                stylers: [{color: '#db8555'}]
+              },
+              {
+                featureType: 'road.local',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#806b63'}]
+              },
+              {
+                featureType: 'transit.line',
+                elementType: 'geometry',
+                stylers: [{color: '#dfd2ae'}]
+              },
+              {
+                featureType: 'transit.line',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#8f7d77'}]
+              },
+              {
+                featureType: 'transit.line',
+                elementType: 'labels.text.stroke',
+                stylers: [{color: '#ebe3cd'}]
+              },
+              {
+                featureType: 'transit.station',
+                elementType: 'geometry',
+                stylers: [{color: '#dfd2ae'}]
+              },
+              {
+                featureType: 'water',
+                elementType: 'geometry.fill',
+                stylers: [{color: '#b9d3c2'}]
+              },
+              {
+                featureType: 'water',
+                elementType: 'labels.text.fill',
+                stylers: [{color: '#92998d'}]
+              }
+            ],
+            {name: 'Styled Map'});
 
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        </div>
-        
-        <div id="second">
-          <h1>HTML</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        // Create a map object, and include the MapTypeId to add
+        // to the map type control.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 55.647, lng: 37.581},
+          zoom: 11,
+          mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'styled_map']
+          }
+        });
 
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        </div>
-        
-        <div id="products">
-          <h1>ColdFusion</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>  
-        </div>
-        
-        <div id="about-us">
-          <h1>Database</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>  
-        </div>
-        
-        <div id="contacts">
-          <h1>Programming</h1>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-          <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        </div>
-        
+        //Associate the styled map with the MapTypeId and set it to display.
+        map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuqBOF7FYKau5wp-K9pTXyQsoB6YQQTxg&callback=initMap"
+    async defer></script>
 	</body>
 </html>

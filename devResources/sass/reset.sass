@@ -4,9 +4,49 @@
   margin: 0
   font-size: 16px
   outline: 0
+  font-family: 'Lato', sans-serif
+  letter-spacing: 0.04em
 body, html
   max-width: 100%
   min-height: 100%
   overflow-x: hidden
 ul
   list-style-type: none
+img
+  max-width: 100%
+button, input, textarea
+  border: none
+  background-image: none
+  background-color: transparent
+  box-shadow: none
+  outline: 0
+.section-wrapper
+  padding: 110px 20px
+  @media (max-width: 1023px)
+    padding: 60px 20px
+  @media (max-width: 767px)
+    padding: 30px 16px
+  @media (max-width: 479px)
+    padding: 30px 8px
+.no-markup
+  background-color: #999
+  padding: 16px
+.right-bg
+  background-image: url(../images/mockup.png)
+  background-repeat: no-repeat
+  background-position: 83% 50%
+  padding-bottom: 50px
+  @media (max-width: 1300px)
+    background-position: 100% 50%
+.low-padding
+  padding-bottom: 40px
+  @media (max-width: 1023px)
+    padding-bottom: 20px
+.map-wrapper
+  position: relative
+.hidden
+  display: none
+.clear
+  min-height: 1px
+  width: 100%
+  clear: both

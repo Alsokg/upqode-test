@@ -1,0 +1,61 @@
+$purple: #503392
+.card
+  position: relative
+  height: 270px
+  overflow: hidden
+  width: 200px
+  text-align: center
+  border: thin solid #ebebeb
+  margin: 18px
+  &__interactive
+    position: absolute
+    background-color: $purple
+    height: 150px
+    bottom: -150px
+    transition: 0.35s
+    width: 100%
+  &:hover &__interactive, .is-open
+    bottom: 0
+  &__icon
+    height: 130px
+    i
+      font-size: 60px
+      line-height: 130px
+      color: $purple
+  &__title, &__more
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    font-size: 0.875rem
+    color: #232323
+    padding: 20px 16px
+  &__title
+    font-weight: 900
+  &__more
+    font-weight: 600
+    padding-top: 32px
+    color: #fff
+  &__description
+    font-weight: 300
+    line-height: 20px
+    color: #373737
+    height: 60px
+    overflow: hidden
+    padding: 0 16px
+  &__link
+    width: 36px
+    height: 36px
+    border: thin solid #fff
+    border-radius: 50%
+    display: inline-block
+    text-align: center
+    color: #fff
+    line-height: 34px
+    transition: all 0.2s
+    margin: 0 7px
+    .fa-search-plus
+      padding-left: 2px
+    &:hover, &:focus
+      color: $purple
+      background-color: #fff
+  &__links-container
+    padding-top: 12px
