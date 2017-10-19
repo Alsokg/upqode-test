@@ -1,3 +1,5 @@
+Project created in:
+
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
     |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
@@ -5,23 +7,20 @@
      `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
     ----------------------------------------------------------------- 
 
+This is simple html/css/js test project.
 
-Hi there! Welcome to Cloud9 IDE!
+Gulp configureted only for minify and concat js and sass files.
 
-To get you started, we included a small hello world application.
+Google maps: example from tutorial
 
-1) Open the hello-world.html file
+Concat form validation: simple HTML5 required attributes (jquery.validator can be better...)
 
-2) Click on the Preview button to open a live preview pane
+About us: simple "line-animate" plugin, that can process every bar independently
 
-3) Make some changes to the file, save, watch the preview, and have fun!
+Navbar: simple "nav-anchor" plugin, 
+    can animate scroll to anchors
+    can change active nav-link with scroll
+    
+Slider: slick-slider. Autoplay is one of many options...
 
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for documentation, or http://support.c9.io for support.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
-# upqode-test
+Blocks: Products is skipped
