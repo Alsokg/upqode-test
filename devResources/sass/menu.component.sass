@@ -126,3 +126,55 @@ $menuBgColor: #fff
   .navbar
     &__list
       display: none
+      background-color: #fff
+      position: absolute
+      width: 100%
+      top: 70px
+      max-height: 100vh
+      overflow: auto
+    &__dropdown
+      display: block
+      position: inherit
+      width: 100%
+      background-color: #fff
+      border: none
+      padding: 0
+      &--level2
+        li a
+          padding-left: 8px
+      &--level3
+        left: 0
+        li a
+          padding-left: 16px
+
+    &__item--sublevel
+      &:before
+        display: none
+        content: ""
+      &:hover
+        >a
+          color: #232323
+          font-weight: 700
+    &__item, &__item--sublevel
+      width: 100%
+      float: none
+      height: 40px
+      line-height: 40px
+      padding: 0
+      text-align: left
+      &--dropdown
+        position: relative
+        height: auto
+        >.navbar__dropdown
+          display: block
+        
+      a
+        padding: 0 16px 0 0
+        color: #232323
+        line-height: 40px
+        max-width: 190px
+        height: 40px
+        display: block
+        margin-left: auto
+    .is-active a
+      color: #232323

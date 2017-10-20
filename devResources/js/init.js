@@ -27,6 +27,11 @@ $(document).ready(function() {
   
   $('.navbar__toggle').on('click', function(event){
     event.preventDefault();
-    $('.navbar__list').slideToggle(300);
+    $('.navbar__list').slideToggle(300).addClass('is-mobile');
+  })
+  $('.navbar__item').on('click', function(event){
+    if ($('.navbar__list').hasClass('is-mobile')){
+      $('.navbar__list').slideUp(300).removeClass('is-mobile');
+    }
   })
 });
